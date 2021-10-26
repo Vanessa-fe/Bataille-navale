@@ -1,0 +1,122 @@
+html {
+    --cell-size: 50px;
+    --color-one: #0bad93;
+    --color-two: #fffdd8;
+    --color-hit: green;
+    --color-splash: red;
+    font-family: "Lucida Console", sans-serif;
+    text-align: center;
+}
+
+h3 {
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-one);
+}
+
+p {
+    margin: 1rem 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+#grid {
+    font-size: 14px;
+    display: inline-block;
+    margin: 1rem 0;
+
+    border: 1px solid var(--color-one);
+}
+
+.row {
+    background-color: var(--color-two);
+    display: flex;
+}
+
+.cell {
+    color: var(--color-one);
+    font-size: 1.2rem;
+    text-align: center;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    line-height: var(--cell-size);
+    white-space: nowrap;
+    flex-grow: 1;
+    border-bottom: 1px solid var(--color-one);
+    border-right: 1px solid var(--color-one);
+}
+
+div.cell:hover {
+    cursor:pointer;
+}
+
+header.cell {
+    background-color: var(--color-one);
+    color: var(--color-two);
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.row:last-child .cell {
+    border-bottom: 0;
+}
+
+.row .cell:last-child {
+    border-right: 0;
+}
+
+#actions {
+    display: none;
+    width: 50%;
+    height: 120px;
+    color: var(--color-one);
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    max-height: 3rem;
+    overflow: auto;
+    font-size: 1rem;
+}
+
+#hide-actions {
+    display :none;
+}
+
+/* cells classes */
+.cell.hit {
+    background-color: var(--color-hit);
+    font-size: 0;
+}
+
+.cell.splash {
+    background-color: var(--color-splash);
+    font-size: 0;
+}
+
+/* themes */
+body.f0f {
+    --color-one: #ff00ff;
+    --color-two: #00ffff;
+    --color-hit: #00ff00;
+    --color-splash:#ffaa00;
+}
+
+body.black-and-white {
+    --color-one: #000;
+    --color-two: #fff;
+    --color-hit: #aaa;
+    --color-splash: #666;
+}
+
+body.terminal {
+    background-color: black;
+    color: #33ff00;
+    --color-one: #33ff00;
+    --color-two: #000;
+    --color-hit: #33ff00;
+    --color-splash: #ffbb00;
+}
